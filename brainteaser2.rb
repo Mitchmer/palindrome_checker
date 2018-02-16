@@ -1,6 +1,6 @@
 def user_input
   puts "What would you like to input as your palindrome?"
-  input = gets.strip
+  input = gets.strip.downcase
   checkinput(input)
 end
 
@@ -12,9 +12,9 @@ def checkinput(word)
     reversearr << checkprep.pop
   end
   if initialarr == reversearr
-    puts "What up! Nice pallindrome"
+    puts "What up! Nice palindrome"
   else
-    puts "That's definitely not a pallindrome. Try again."
+    puts "That's definitely not a palindrome. Try again."
   end
   puts "Would you like to try again? (y/n)"
   choice = gets.strip
